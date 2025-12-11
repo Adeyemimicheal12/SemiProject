@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set active nav link on page load
   updateActiveNavLink()
 
+   const toggleBtn = document.getElementById("toggleBtn")
+  const navLinks = document.getElementById("navLinks")
+
+  if (toggleBtn && navLinks) {
+    toggleBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open")
+    })
+  }
+
   // Trigger animations on initial page load
   triggerScrollAnimations()
 
@@ -115,3 +124,4 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   })
 })
+
